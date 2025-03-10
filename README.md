@@ -1,2 +1,17 @@
-# Blinking-LED-Circuit
-Experiment for a Blinking LED circuit, using Arduino Uno with LED interfaced to it and serving as an output transducer. 
+void setup() {
+pinMode(13,OUTPUT);
+}
+
+
+void loop() {
+ //int botton=digitalRead(2);
+ digitalWrite(13,HIGH);
+ int dial = analogRead(0);
+ tone(9,440);
+ delay(500);
+ delay(dial);
+ digitalWrite(13,LOW);
+ noTone(9);
+ delay(200);
+ delay(dial);
+}
